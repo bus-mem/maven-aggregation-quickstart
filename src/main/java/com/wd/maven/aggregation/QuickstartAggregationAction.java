@@ -41,7 +41,7 @@ public class QuickstartAggregationAction extends AnAction {
           generator.generateProject(project, groupId, artifactId);
 
             // 刷新项目视图
-            refreshProjectView(project);
+          refreshProjectView(project);
           formatAllProjectFiles(project);
         }
     }

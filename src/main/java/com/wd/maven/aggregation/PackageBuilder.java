@@ -16,14 +16,12 @@ public class PackageBuilder extends BaseBuilder {
 		PropertiesConfig tmpConfig = new PropertiesConfig();
 		tmpConfig.setArtifactId(config.getArtifactId());
 		tmpConfig.setParentArtifactId(config.getParentArtifactId());
-		tmpConfig.setPackageName((config.getGroupId() + "." + config.getParentArtifactId() + "."
-				+ config.getArtifactId()+".controller").replace("-", "_"));
+		tmpConfig.setPackageName((config.getGroupId() + "." + config.getParentArtifactId() + "." + config.getArtifactId()+".controller").replace("-", "_"));
 		tmpConfig.setGroupId(config.getGroupId());
-		String packagePath = config.getPackageName().replace(".", "/");
+		String packagePath = tmpConfig.getPackageName().replace(".", "/");
 		File file = new File(projectsRoot + "/src/main/java/" + packagePath, "package-info.java");
 		super.writeFile(file, "package-info.ftl", tmpConfig);
-		tmpConfig.setPackageName((config.getGroupId() + "." + config.getParentArtifactId() + "."
-				+ config.getArtifactId()+".exception").replace("-", "_"));
+		tmpConfig.setPackageName((config.getGroupId() + "." + config.getParentArtifactId() + "." + config.getArtifactId()+".exception").replace("-", "_"));
 		packagePath = tmpConfig.getPackageName().replace(".", "/");
 		file = new File(projectsRoot + "/src/main/java/" + packagePath, "package-info.java");
 		super.writeFile(file, "package-info.ftl", tmpConfig);

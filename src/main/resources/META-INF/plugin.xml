@@ -80,6 +80,5 @@
 
     <!--手动设置版本号    -->
     <idea-version since-build="203" until-build="253.*"/>
-
-
+    <depends>com.intellij.modules.java</depends>
 </idea-plugin>
