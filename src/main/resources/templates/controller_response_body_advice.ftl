@@ -3,6 +3,7 @@ package ${packageName};
 import ${config.packageName}.common.Msg;
 import cn.hutool.json.JSONObject;
 import com.google.common.collect.Lists;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.core.MethodParameter;
 import org.springframework.http.MediaType;
 import org.springframework.http.converter.HttpMessageConverter;
